@@ -22,7 +22,7 @@ public class GeoJSONController {
         geometry.setCoordinates(Arrays.asList(10.0, 20.0));
         feature.setGeometry(geometry);
 
-        //adicionando propriedade adicionais, se necessario
+        //adicionando propriedade adicionais
         Map<String, Object> properties = new HashMap<>();
         properties.put("name", "Exemplo de localização");
         feature.setProperties(properties);
@@ -32,10 +32,10 @@ public class GeoJSONController {
 
     @GetMapping("/multipolygon")
     public GeoJSONMultiPolygon getMultiPolygonGeoJSON() {
-        // Crie um objeto GeoJSON de exemplo representando um MultiPolygon
+        // Criando um objeto GeoJSON de exemplo representando um MultiPolygon
         GeoJSONMultiPolygon multiPolygon = new GeoJSONMultiPolygon();
 
-        // Adicione coordenadas para duas regiões poligonais diferentes
+        // Adicionando coordenadas para duas regiões poligonais diferentes
         List<List<List<List<Double>>>> polygonCoordinates = new ArrayList<>();
 
         // Primeiro MultiPolygon (um retângulo)
